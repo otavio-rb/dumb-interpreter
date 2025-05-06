@@ -92,7 +92,7 @@ dumb hello.dumb
 
 Para facilitar a escrita de código na linguagem, o repositório inclui uma extensão do VS Code que adiciona realce de sintaxe e coloração personalizada.
 
-###Instalação da Extensão
+### Instalação da Extensão
 Certifique-se de ter o VS Code instalado.
 
 Navegue até a pasta do projeto onde está o arquivo Dumb-0.0.1.vsix.
