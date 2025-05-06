@@ -49,7 +49,8 @@ int func convertToDecimal(input, base) {
   }
 
   return decimalNumber;
-}```
+}
+```
 
 ### Conversão de Base (Hexadecimal para Decimal)
 
@@ -62,4 +63,41 @@ str func convertToBinary(num){
   }
   print(binaryOutput);
   return binaryOutput;
-}```
+}
+```
+
+### Conversão de Decimal para Binário
+```c
+str func convertToBinary(num){
+  str binaryOutput = "";
+  loop(int i = 0; num > 0; i = i + 1) {
+    binaryOutput = num % 2 + binaryOutput;
+    num = floor(num / 2);
+  }
+  print(binaryOutput);
+  return binaryOutput;
+}
+```
+
+## Como Executar
+Clone este repositório:
+```bash
+git clone https://github.com/otavio-rb/dumb-interpreter
+cd seu-repo
+dumb hello.dumb
+```
+É necessário que o [Node.js](https://nodejs.org/pt) esteja instalado na sua máquina
+
+## Suporte para Vs Code
+
+Para facilitar a escrita de código na linguagem, o repositório inclui uma extensão do VS Code que adiciona realce de sintaxe e coloração personalizada.
+
+###Instalação da Extensão
+Certifique-se de ter o VS Code instalado.
+
+Navegue até a pasta do projeto onde está o arquivo Dumb-0.0.1.vsix.
+
+Execute o comando abaixo no terminal:
+```bash
+code --install-extension ./Dumb-0.0.1.vsix
+```
