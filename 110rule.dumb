@@ -1,0 +1,58 @@
+intArray current = [];
+intArray next = [];
+intArray rule = [0, 1, 1, 0, 1, 1, 1, 0]; 
+
+int limit = 64;
+
+str func printLine(array){
+  str line = "";
+
+  loop(int i = 0; i < len(array); i = i + 1){
+    if(array[i] == 1){
+      line = line + "█";
+    }
+
+    if(array[i] == 0){
+      line = line + " ";
+    }
+  }
+
+  print(line);
+
+  return "";
+}
+
+loop(int i = 0; i < 31; i = i + 1){
+  if(i == 15){
+    current[i] = 1;
+  } 
+  
+  if(i != 15) {
+    current[i] = 0;
+  }
+}
+
+loop(int gen = 0; gen < 15; gen = gen + 1){
+  printLine(current);
+
+  loop(int i = 0; i < 31; i = i + 1){
+    int left = 0;
+    int center = current[i];
+    int right = 0;
+
+    if(i > 0){
+      left = current[i - 1];
+    }
+
+    if(i < 30){
+      right = current[i + 1];
+    }
+
+    int ruleIndex = left * 4 + center * 2 + right;
+    next[i] = rule[ruleIndex];
+  }
+
+  loop(int i = 0; i < 31; i = i + 1){
+    current[i] = next[i];
+  }
+}

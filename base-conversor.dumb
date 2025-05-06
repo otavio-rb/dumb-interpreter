@@ -1,0 +1,143 @@
+print("-- INSIRA UMA BASE --");
+print("BASE 2 - Binário");
+print("BASE 3 - Ternário");
+print("BASE 5 - Quinário");
+print("BASE 8 - Octal");
+print("BASE 10 - Decimal");
+
+int baseFrom = ask("Insira a base original (Em número): ");
+int baseTo = ask("Insira a base para ser convertida (Em número): ");
+str inputNumber = ask("Insira o número na base mecionada: ");
+
+int func convertToDecimal(input, base) {
+  strArray tokens = split(input, "");
+  int decimalNumber = 0;
+
+  loop(int i = 0; i < len(tokens); i = i + 1){
+    if(tokens[i] == "A"){
+      tokens[i] = 10;
+    }
+
+    if(tokens[i] == "B"){
+      tokens[i] = 11;
+    }
+
+    if(tokens[i] == "C"){
+      tokens[i] = 12;
+    }
+
+    if(tokens[i] == "D"){
+      tokens[i] = 13;
+    }
+    
+    if(tokens[i] == "E"){
+      tokens[i] = 14;
+    }
+
+    if(tokens[i] == "F"){
+      tokens[i] = 15;
+    }
+
+    tokens[i] = Number(tokens[i]);
+  }
+
+  loop(int i = 0; i < len(tokens); i = i + 1){
+    int digit = tokens[len(tokens) - 1 - i];
+    int poweredNumber = pow(base, i);
+    int newNumber = poweredNumber * digit;
+
+    decimalNumber = newNumber + decimalNumber;
+  }
+
+  return decimalNumber;
+}
+
+str func convertToBinary(num){
+  str binaryOutput = "";
+
+  loop(int i = 0; num > 0; i = i + 1) {
+    str digit = String(num % 2);
+
+    binaryOutput = digit + binaryOutput;
+    num = floor(num / 2);
+  }
+
+  return binaryOutput;
+}
+
+str func convertToHexadecimal(num){
+  str hexadecimalOutput = "";
+
+  loop(int i = 0; num > 0; i = i + 1) {
+    int digit = num % 16;
+
+    if(digit == 10){
+      hexadecimalOutput = "A" + hexadecimalOutput;
+    }
+
+    if(digit == 11){
+      hexadecimalOutput = "B" + hexadecimalOutput;
+    }
+
+    if(digit == 12){
+      hexadecimalOutput = "C" + hexadecimalOutput;
+    }
+
+    if(digit == 13){
+      hexadecimalOutput = "D" + hexadecimalOutput;
+    }
+
+    if(digit == 14){
+      hexadecimalOutput = "E" + hexadecimalOutput;
+    }
+
+    if(digit == 15){
+      hexadecimalOutput = "F" + hexadecimalOutput;
+    }
+
+    if(digit < 10) {
+      hexadecimalOutput = digit + hexadecimalOutput;
+    }
+
+    num = floor(num / 16);
+  }
+
+  print(hexadecimalOutput);
+
+  return hexadecimalOutput;
+}
+
+print(baseFrom, "->", baseTo);
+
+str result = "";
+int decimalNumber = 0;
+
+if(baseFrom != 10){
+  decimalNumber = convertToDecimal(inputNumber, baseFrom);
+}
+
+if(baseFrom == 10){
+  decimalNumber = Number(inputNumber);
+}
+
+if(baseTo == 2){
+  result = convertToBinary(decimalNumber);
+}
+
+if(baseTo == 3){
+
+}
+
+if(baseTo == 5){
+
+}
+
+if(baseTo == 8){
+
+}
+
+if(baseTo == 16){
+  result = convertToHexadecimal(decimalNumber);
+}
+
+print("RESULTADO: ", result);
