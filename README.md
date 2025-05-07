@@ -1,4 +1,4 @@
-# Interpretador de Linguagem Própria
+8# Interpretador de Linguagem Própria
 
 ## Motivação
 
@@ -19,8 +19,7 @@ A execução da Regra 110 na linguagem prova que ela é capaz de realizar qualqu
   - Laços (`loop`)
   - Condicionais (`if`)
   - Operações matemáticas e lógicas
-  - Conversões entre bases numéricas
-  - Manipulação de arrays e strings
+  - Manipulação de arrays e strings (Matrizes ainda não suportadas)
 
 ## Exemplos de Código
 
