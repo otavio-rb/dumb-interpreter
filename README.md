@@ -1,9 +1,5 @@
 8# Interpretador de Linguagem Própria
 
-## Motivação
-
-Sempre tive curiosidade em entender como funcionam interpretadores e linguagens de programação por baixo dos panos. Para explorar esse universo, decidi criar minha **própria linguagem de programação** e um **interpretador simples** para ela. Foi uma jornada prática e desafiadora, que me permitiu entender conceitos fundamentais da computação.
-
 ## Turing Completude
 
 Minha linguagem é **Turing completa**, o que significa que ela possui a mesma capacidade computacional de uma máquina de Turing. Para comprovar isso, implementei nela o **autômato celular conhecido como Regra 110**, que é matematicamente reconhecido como Turing completo.
