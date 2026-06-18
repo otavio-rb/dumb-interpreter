@@ -1,4 +1,4 @@
-8# Interpretador de Linguagem Própria
+# Interpretador de Linguagem Própria
 
 ## Turing Completude
 
